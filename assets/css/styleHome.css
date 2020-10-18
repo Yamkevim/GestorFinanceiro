@@ -7,6 +7,10 @@
  #wrapper {
     overflow-x: hidden;
  }
+ .Sair{
+  margin-top: 800px;
+}
+ 
 
 #sidebar-wrapper {
   min-height: 100vh;
@@ -26,8 +30,10 @@
   width: 15rem;
 }
 
+
 #page-content-wrapper {
   min-width: 100vw;
+  
 }
 
 #wrapper.toggled #sidebar-wrapper {
@@ -47,4 +53,6 @@
   #wrapper.toggled #sidebar-wrapper {
     margin-left: -15rem;
   }
+  
 }
+
