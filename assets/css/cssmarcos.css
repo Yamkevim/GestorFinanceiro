@@ -1,0 +1,35 @@
+.jumbotron {
+    background-color: black;
+    color: white;
+    margin-top: 0;
+}
+
+.jumbotron h1,h4 {
+    font-size: 4em;
+}
+
+/* RESETS */
+/* {
+    /* border: 1px solid rgb(243, 29, 29);
+    background-color: rgba(243,29,29,0.1); 
+    margin: 0;
+    padding: 0;
+    margin-left: 0px; */    
+}   
+
+/*.cabeçalho{
+    background-color: black;
+    color: white;
+    width: 100%;
+    position: absolute;*/
+
+/*#main {
+height: 100%;
+width:  100%;
+margin-top: 500px;
+margin-left: 10px;
+position: absolute;*/
+}
+
+}
+
