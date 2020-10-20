@@ -1,0 +1,55 @@
+*
+{
+    margin: 0px;
+    margin-left: 0px;
+   
+
+}
+header{
+    background-color: black;
+    height: 100px;
+    width: 100vw;
+}
+.btn{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 120px;
+    height: 40px;
+    width: 220px;
+}
+h6{
+    margin-left: 40px;
+}
+.logoP{
+    height: 400px;
+    width: 380px;
+    background-color: brown;
+}
+.d-block{
+    
+    margin-left: 0px;
+    background-color: black;
+   
+    height: 280px;
+}
+a{
+    color: white;
+
+}
+h5{
+    
+    position: absolute;
+    margin-left: 55px;
+    margin-top: 35px;
+    height: 50px;
+    width: 75px;
+    
+  
+}
+p{
+    background-color: black;
+    
+}
+h3{
+    color: black;
+}
