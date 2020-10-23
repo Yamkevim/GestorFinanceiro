@@ -19,6 +19,7 @@
 </head>
 
 <body>
+  
 
   <div class="d-flex" id="wrapper">
 
@@ -26,66 +27,83 @@
     <div class="bg-dark border-dark" id="sidebar-wrapper">
       <div  class="sidebar-heading" ><a  href ="/home.html">Painel inicial </a> </div>
       <div class="list-group list-group-flush">
+        <button type="button" class="btn btn-" data-toggle="modal" data-target="#modalExemplo">
+          Nova despesa
+        </button>
         
+        <!-- Modal -->
+        <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form role="form">
+                      <fieldset>
+                          <div class="row">
+                              <div class="form-group col-lg-4">
+                                  <label for="exampleInputEmail1">Campo simples</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+                              </div>
+                              <div class="form-group col-lg-8">
+                                  <label for="exampleInputEmail1">Campo simples</label>
+                                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="form-group col-lg-6">
+                                  <label for="exampleInputEmail1">Seletor</label>
+                                  <select class="form-control">
+                                      <option value="">Selecione algo</option>
+                                      <option value="">Opção 1</option>
+                                      <option value="">Opção 2</option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-lg-6">
+                                  <label for="exampleInputEmail1">Seletor</label>
+                                  <select class="form-control">
+                                      <option value="">Selecione algo</option>
+                                      <option value="">Opção 1</option>
+                                      <option value="">Opção 2</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="form-group col-lg-3">
+                                  <label for="exampleInputEmail1">Senha</label>
+                                  <input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
+                              </div>
+                              <div class="form-group col-lg-6">
+                                  <label for="exampleInputEmail1">Email</label>
+                                  <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                              </div>
+                              <div class="form-group col-lg-3">
+                                  <label for="exampleInputEmail1">Data</label>
+                                  <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                              </div>
+                          </div>
+                          <div class="box-actions">
+                              <button type="submit" class="btn btn-primary">Enviar</button>
+                              <button class="btn btn-danger">Cancelar</button>
+                          </div>
+                   
+                      </fieldset>
+                  </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+              </div>
+            </div>
+          </div>
+        </div>
+         
         
-        <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-dark dropdown-toggle"
-            data-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Cadastro
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item btn-dark" href="lancamentos/despesas.html">Despesas</a></li>
-            <li><a class="dropdown-item" href="lancamentos/receitas.html">Receitas</a></li>
-            
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            
-        </div>
-
-        <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-dark dropdown-toggle"
-            data-toggle="dropdown"
-            aria-expanded="false"
-          >
-           Consultar
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item btn-dark" href="lancamentos/despesas.html">Lancamentos</a></li>
-            <li><a class="dropdown-item" href="lancamentos/receitas.html">Receitas</a></li>
-            
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            
-        </div>
-
-        <div class="btn-group">
-          <button
-            type="button"
-            class="btn btn-dark dropdown-toggle"
-            data-toggle="dropdown"
-            aria-expanded="false"
-          >
-            Sobre
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-            <li>
-              <hr class="dropdown-divider" />
-            </li>
-            <li><a class="dropdown-item" href="#">Separated link</a></li>
-          </ul>
-        </div>
-        
+       
           
         
         
@@ -96,6 +114,7 @@
     <div id="page-content-wrapper">
 
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        
         <button class="btn btn-dark" id="menu-toggle">...</button>
         
 
@@ -104,7 +123,172 @@
 
       <div class="container-fluid">
         <h1 class="mt-4">Informações Gerais</h1>
-        
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel iure sed expedita veniam reiciendis iste debitis soluta quod explicabo magni asperiores blanditiis beatae, est eaque sunt ipsam officia repudiandae facilis.
+        </div>
+        <div>
+          <button type="button" class="btn btn-" data-toggle="modal" data-target="#modalExemplo">
+            Nova despesa
+          </button>
+          
+          <!-- Modal -->
+          <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <fieldset>
+                            <div class="row">
+                                <div class="form-group col-lg-4">
+                                    <label for="exampleInputEmail1">Campo simples</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+                                </div>
+                                <div class="form-group col-lg-8">
+                                    <label for="exampleInputEmail1">Campo simples</label>
+                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-6">
+                                    <label for="exampleInputEmail1">Seletor</label>
+                                    <select class="form-control">
+                                        <option value="">Selecione algo</option>
+                                        <option value="">Opção 1</option>
+                                        <option value="">Opção 2</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="exampleInputEmail1">Seletor</label>
+                                    <select class="form-control">
+                                        <option value="">Selecione algo</option>
+                                        <option value="">Opção 1</option>
+                                        <option value="">Opção 2</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-lg-3">
+                                    <label for="exampleInputEmail1">Senha</label>
+                                    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
+                                </div>
+                                <div class="form-group col-lg-6">
+                                    <label for="exampleInputEmail1">Email</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                                </div>
+                                <div class="form-group col-lg-3">
+                                    <label for="exampleInputEmail1">Data</label>
+                                    <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                                </div>
+                            </div>
+                            <div class="box-actions">
+                                <button type="submit" class="btn btn-primary">Enviar</button>
+                                <button class="btn btn-danger">Cancelar</button>
+                            </div>
+                     
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                  <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <button type="button" class="btn btn-" data-toggle="modal" data-target="#modalExemplo">
+              Nova despesa
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <form role="form">
+                          <fieldset>
+                              <div class="row">
+                                  <div class="form-group col-lg-4">
+                                      <label for="exampleInputEmail1">Campo simples</label>
+                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+                                  </div>
+                                  <div class="form-group col-lg-8">
+                                      <label for="exampleInputEmail1">Campo simples</label>
+                                      <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-group col-lg-6">
+                                      <label for="exampleInputEmail1">Seletor</label>
+                                      <select class="form-control">
+                                          <option value="">Selecione algo</option>
+                                          <option value="">Opção 1</option>
+                                          <option value="">Opção 2</option>
+                                      </select>
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                      <label for="exampleInputEmail1">Seletor</label>
+                                      <select class="form-control">
+                                          <option value="">Selecione algo</option>
+                                          <option value="">Opção 1</option>
+                                          <option value="">Opção 2</option>
+                                      </select>
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="form-group col-lg-3">
+                                      <label for="exampleInputEmail1">Senha</label>
+                                      <input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
+                                  </div>
+                                  <div class="form-group col-lg-6">
+                                      <label for="exampleInputEmail1">Email</label>
+                                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                                  </div>
+                                  <div class="form-group col-lg-3">
+                                      <label for="exampleInputEmail1">Data</label>
+                                      <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                                  </div>
+                              </div>
+                              <div class="box-actions">
+                                  <button type="submit" class="btn btn-primary">Enviar</button>
+                                  <button class="btn btn-danger">Cancelar</button>
+                              </div>
+                       
+                          </fieldset>
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+             
+            
+           
+              
+            
+            
+          </div> 
+          
+         
+            
+          
+          
+        </div>
       </div>
     </div>
     
