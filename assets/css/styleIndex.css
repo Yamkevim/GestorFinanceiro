@@ -5,6 +5,7 @@
    
 
 }
+
 header{
     background-color: black;
     height: 100px;
@@ -20,11 +21,24 @@ header{
 h6{
     margin-left: 40px;
 }
+.mb{
+    margin-top: 30px;
+}
+
+.page-footer{
+    background-color:black;
+    height: 180px;
+    margin-top: 30px;
+}
 .logoP{
     height: 400px;
     width: 380px;
     background-color: brown;
 }
+.fb-ic{
+    margin-top: 10px;
+}
+
 .d-block{
     
     margin-left: 0px;

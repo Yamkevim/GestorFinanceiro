@@ -2,14 +2,18 @@
 <html lang="pt">
 
     <head>
+        
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="assets/css/style_cadastro
 .css">
+<script text="text/javascript" href="/cadastro.js"></script>
+</head>
     <title>Entrar</title>
     <body>
     <header>		
@@ -42,55 +46,29 @@
           </button>
         </div>
         <div class="modal-body">
-            <form role="form">
-                <fieldset>
-                    <div class="row">
-                        <div class="form-group col-lg-4">
-                            <label for="exampleInputEmail1">Campo simples</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
-                        </div>
-                        <div class="form-group col-lg-8">
-                            <label for="exampleInputEmail1">Campo simples</label>
-                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Insira seu texto aqui">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-lg-6">
-                            <label for="exampleInputEmail1">Seletor</label>
-                            <select class="form-control">
-                                <option value="">Selecione algo</option>
-                                <option value="">Opção 1</option>
-                                <option value="">Opção 2</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <label for="exampleInputEmail1">Seletor</label>
-                            <select class="form-control">
-                                <option value="">Selecione algo</option>
-                                <option value="">Opção 1</option>
-                                <option value="">Opção 2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-group col-lg-3">
-                            <label for="exampleInputEmail1">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputEmail1" placeholder="senha">
-                        </div>
-                        <div class="form-group col-lg-6">
-                            <label for="exampleInputEmail1">Email</label>
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
-                        </div>
-                        <div class="form-group col-lg-3">
-                            <label for="exampleInputEmail1">Data</label>
-                            <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
-                        </div>
-                    </div>
-                    <div class="box-actions">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-                        <button class="btn btn-danger">Cancelar</button>
-                    </div>
-             
+            <form id="register" method="post" onsubmit="validacao();">
+                <fieldset id="cadastrar">
+                    <legend> Cadastro </legend>
+                    
+                    <label for="nome"> Nome </label> 
+                    <input type="text" name="nome"/>
+                    
+                    <label for="telefone"> Telefone </label> 
+                    <input type="tel" name="telefone"/>
+                    
+                    <label for="email"> Email </label>
+                    <input type="email" name="email"/>
+                    
+                    <label for="usuario"> Nome de usuário </label>
+                    <input type="text" name="usuario"/>
+                    
+                    <label for="senha"> Senha </label>
+                    <input type="password" name="senha"/>
+                    
+                    <label for="senharep"> Digite a senha novamente</label>
+                    <input type="password" name="senharep"/>
+                    
+                    <button type="submit" name="enviar"> Cadastrar </button>
                 </fieldset>
             </form>
         </div>
@@ -101,6 +79,7 @@
       </div>
     </div>
   </div>
+  
     </main>
 </body>
    
