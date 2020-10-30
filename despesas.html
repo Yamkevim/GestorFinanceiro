@@ -11,11 +11,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-  <title>Painel de controle</title>
+  <title>Despesas</title>
 
   
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/css/styleHome.css" rel="stylesheet">
+  <link href="/assets/css/styleHome.css" rel="stylesheet">
 
 </head>
 
@@ -26,43 +26,74 @@
 
     
     <div class="bg-dark border-dark" id="sidebar-wrapper">
-      <div  class="sidebar-heading" ><a  href ="/home.html">Painel inicial </a> </div>
+      <div  class="sidebar-heading" ><a  href ="/home.html">Voltar </a> </div>
       <div class="list-group list-group-flush">
-        <div class="dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Receitas
-          </a>
+        <button type="button" class="btn btn-light btn-rounded"data-toggle="modal" data-target="#modalCadastro" > <i class="fa fa-plus"> </i> Novo</button>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="receitas.html">Consultar</a>
-           
+        <div class="modal fade" id="modalCadastro" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastrar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form role="form">
+                      <fieldset>
+                          <div class="row">
+                              <div class="form-group col-lg-8">
+                                  <label for="labelDescricao">Descrição</label>
+                                  <input type="text" class="form-control" id="idDescricao" placeholder="Insira a descrição">
+                              </div>
+                              <div class="form-group col-lg-4">
+                                <label for="LalbelValor">Valor</label>
+                                <input type="" class="form-control" id="idLabelValor" placeholder="0,00">
+                            </div>
+                              
+                          </div>
+                          <div class="row">
+                              <div class="form-group col-lg-6">
+                                  <label for="labelCategoria">Categoria</label>
+                                  <select class="form-control">
+                                      <option value="">Escolher</option>
+                                      <option value="">Casa</option>
+                                      <option value="">Cartão</option>
+                                      <option value=""></option>
+                                      <option value=""></option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-lg-6">
+                                  <label for="labelSubcategoria">Sub-categoria</label>
+                                  <select class="form-control">
+                                      <option value="">Escolher</option>
+                                      <option value="">Opção 1</option>
+                                      <option value="">Opção 2</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="row">
+                              
+                              
+                              
+                              <div class="form-group col-lg-6">
+                                <label for="exampleInputEmail1">Data</label>
+                                <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                            </div>
+                          </div>
+                          <div class="box-actions">
+                              <button type="submit" class="btn btn-success">Enviar</button>
+                              <button class="btn btn-danger">Cancelar</button>
+                          </div>
+                   
+                      </fieldset>
+                  </form>
+              </div>
+              
+            </div>
           </div>
         </div>
-        <div class="dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Despesas
-          </a>
-        
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="despesas.html">Consultar</a>
-           
-          </div>
-        </div>
-        <div class="dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Transferências
-          </a>
-        
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="#">Consultar</a>
-           
-          </div>
-        </div>
-        
-        
          
         
        
@@ -71,8 +102,6 @@
         
         
       </div>
-      <a href="login.html"><button type="button" class="btn btn-light btn-rounded"data-toggle="modal" data-target="#modalCadastro" > <i class="fas fa-power-off" ></i>
-      </i> sair</button> </a>
     </div>
     
     <div id="page-content-wrapper">
@@ -86,7 +115,7 @@
       </nav>
 
       <div class="container-fluid">
-        <h1 class="mt-4">Informações Gerais</h1>
+        <h1 class="mt-4">Resumo das Depesas</h1>
         <div>
           <body class="fixed-sn light-blue-skin">
 

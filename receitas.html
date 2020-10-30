@@ -28,41 +28,72 @@
     <div class="bg-dark border-dark" id="sidebar-wrapper">
       <div  class="sidebar-heading" ><a  href ="/home.html">Painel inicial </a> </div>
       <div class="list-group list-group-flush">
-        <div class="dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Receitas
-          </a>
+        <button type="button" class="btn btn-light btn-rounded"data-toggle="modal" data-target="#modalCadastro" > <i class="fa fa-plus"> </i> Novo</button>
         
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="receitas.html">Consultar</a>
-           
+        <div class="modal fade" id="modalCadastro" tabindex="1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Cadastrar</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form role="form">
+                      <fieldset>
+                          <div class="row">
+                              <div class="form-group col-lg-8">
+                                  <label for="labelDescricao">Descrição</label>
+                                  <input type="text" class="form-control" id="idDescricao" placeholder="Insira a descrição">
+                              </div>
+                              <div class="form-group col-lg-4">
+                                <label for="LalbelValor">Valor</label>
+                                <input type="" class="form-control" id="idLabelValor" placeholder="0,00">
+                            </div>
+                              
+                          </div>
+                          <div class="row">
+                              <div class="form-group col-lg-6">
+                                  <label for="labelCategoria">Categoria</label>
+                                  <select class="form-control">
+                                      <option value="">Escolher</option>
+                                      <option value="">Casa</option>
+                                      <option value="">Cartão</option>
+                                      <option value=""></option>
+                                      <option value=""></option>
+                                  </select>
+                              </div>
+                              <div class="form-group col-lg-6">
+                                  <label for="labelSubcategoria">Sub-categoria</label>
+                                  <select class="form-control">
+                                      <option value="">Escolher</option>
+                                      <option value="">Opção 1</option>
+                                      <option value="">Opção 2</option>
+                                  </select>
+                              </div>
+                          </div>
+                          <div class="row">
+                              
+                              
+                              
+                              <div class="form-group col-lg-6">
+                                <label for="exampleInputEmail1">Data</label>
+                                <input type="date" class="form-control" id="exampleInputEmail1" placeholder="Insira seu emai aqui">
+                            </div>
+                          </div>
+                          <div class="box-actions">
+                              <button type="submit" class="btn btn-success">Enviar</button>
+                              <button class="btn btn-danger">Cancelar</button>
+                          </div>
+                   
+                      </fieldset>
+                  </form>
+              </div>
+              
+            </div>
           </div>
         </div>
-        <div class="dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Despesas
-          </a>
-        
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="despesas.html">Consultar</a>
-           
-          </div>
-        </div>
-        <div class="dropdown">
-          <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Transferências
-          </a>
-        
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Cadastrar</a>
-            <a class="dropdown-item" href="#">Consultar</a>
-           
-          </div>
-        </div>
-        
-        
          
         
        
@@ -71,8 +102,6 @@
         
         
       </div>
-      <a href="login.html"><button type="button" class="btn btn-light btn-rounded"data-toggle="modal" data-target="#modalCadastro" > <i class="fas fa-power-off" ></i>
-      </i> sair</button> </a>
     </div>
     
     <div id="page-content-wrapper">
