@@ -13,20 +13,29 @@
 </head>
 <body>
 
-  <form name ="formsCadastro" class="box" action="/home.html" method="post" onsubmit="return validacao(false)">
+  <form name ="formsCadastro" class="box" action="/home.html" method="post" 
+  onsubmit="return validacao(true)">
     <h1>Bem vindo!</h1>
     <div class="input">
-      <input required type="text" action />
-      <label>Nome</label>
-      <span class="error"></span>
-    </div>
-    <div class="input">
-      <input required type="password" />
-      <label>senha</label>
-      <span class="error"></span>
-    </div>
-    <a href="home.html"><button type="button" class="btn btn-light btn-rounded"data-toggle="modal" data-target="#modalCadastro" > <i class="fas fa-power-off" ></i>
-    </i> Entrar </button> </a>
+      <span class="input-group-addon"> <i
+        class="glyphicon glyphicon-user" style="width: auto"></i>
+
+      </span> 
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-user" style="width: auto"></i>
+        </span>
+        <input id="txtUsuario" runat="server" type="text" class="form-control" name="username" placeholder="Usuário" required="" />
+      </div>
+      <div class="input-group">
+        <span class="input-group-addon">
+          <i class="glyphicon glyphicon-lock" style="width: auto"></i>
+        </span>
+        <input id="txtSenha" runat="server" type="password" class="form-control" name="password" placeholder="Senha" required="" />
+      </div>
+      <div>
+        <input class="btn btn-xm btn-block btn-entrar" type="submit" value="Entrar" onclick="return Login()" />
+      </div>
     <h3>Hiperlink sem sublinhado</h3>
    <a id="idNewUser"href="cadastro.html" style="text-decoration:none">Já possui cadastro?</a>
     

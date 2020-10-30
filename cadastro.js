@@ -1,85 +1,34 @@
-const fields = document.querySelectorAll("[required]")
 
-function ValidateField(field) {
-    // logica para verificar se existem erros
-    function verifyErrors() {
-        let foundError = false;
-
-        for(let error in field.validity) {
-            // se não for customError
-            // então verifica se tem erro
-            if (field.validity[error] && !field.validity.valid ) {
-                foundError = error
-            }
-        }
-        return foundError;
-    }
-
-    function customMessage(typeError) {
-        const messages = {
-            text: {
-                alert: "Por favor, preencha este campo"
-            },
-            email: {
-                
-            }
-        }
-
-        return messages[field.type][typeError]
-    }
-
-    function setCustomMessage(message) {
-        const spanError = field.parentNode.querySelector("span.error")
+        var usuarios = [
+            {"login": "master@123", "senha": "1"},
+            {"login": "user1", "senha": "1"},
+            {"login": "user2", "senha": "2"},
+        ];
         
-        if (message) {
-            spanError.classList.add("active")
-            spanError.innerHTML = message
-        } else {
-            spanError.classList.remove("active")
-            spanError.innerHTML = ""
+        function valida(senha) {
+            let regex = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[!@#$%*()_+^&}{:;?.])(?:([0-9a-zA-Z!@#$%;*(){}_+^&])(?!\1)){6,}$/;
+            if (regex.test(senha)) {
+                console.log(senha, '= válida');
+            } else {
+                console.log(senha, '= inválida');
+            }
         }
-    }
-
-    return function() {
-
-        const error = verifyErrors()
-
-        if(error) {
-            const message = customMessage(error)
-
-            field.style.borderColor = "orange"
-            setCustomMessage(message)
-        } else {
-            field.style.borderColor = "green"
-            setCustomMessage()
+        
+        ['a@1', 'abc@123', 'aab@123'].forEach(s => valida(s));
+        
+        
+        function Login() {
+            var usuario = document.getElementsByName('username')[0].value.toLowerCase();
+            var senha = document.getElementsByName('password')[0].value;
+        
+            for (var u in usuarios) {
+                var us = usuarios[u];
+                if (us.login === usuario && us.senha === senha) {
+                   
+                    return true;
+                }
+            }
+            alert("Usuário ou senha incorreta, tente novamente.");
+            return false;
         }
-    }
-}
-
-
-function customValidation(event) {
-
-    const field = event.target
-    const validation = ValidateField(field)
-
-    validation()
-
-}
-
-for( field of fields ){
-    field.addEventListener("invalid", event => { 
-        // eliminar o bubble
-        event.preventDefault()
-
-        customValidation(event)
-    })
-    field.addEventListener("blur", customValidation)
-}
-
-
-document.querySelector("form")
-.addEventListener("submit", event => {
-    console.log("enviar o formulário")
-
-    
-})
+        
